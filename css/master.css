@@ -1,12 +1,78 @@
-
-.buttonLightGray {
-  
+#displayArea {
+    width: 97%;
+    height: 65%;
+    margin: .635%;
+    border: 5px solid black;
+    background-color: gray;
+    color: white;
+    text-align: right;
+    font-size: 300%;
+    margin-right: 5%;
 }
 
-.buttonGray {
 
+#zeroButton {
+    width: 98.75%;
+    margin: 1.25%;
+}
+div {
+    height: 600px;
+    width: 550px;
+    margin: 0 auto;
 }
 
-.buttonOrange {
+h2 {
+    margin: auto;
+    background-color: orange;
+    color: purple;
+    text-align: center;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
 
+table {
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    padding: 2px;
+    border-radius: 4px;
+    background-color: maroon;
+}
+
+td {
+    width: 25%;
+    height: 16.666%;
+}
+
+body {
+    background-color: lightblue;
+}
+
+.defaultButton {
+    border-width: 3px;
+    border-color: black;
+    border-radius: 3px;
+    margin: 2.5%;
+    width: 97.5%;
+    height: 97.5%;
+    font-size: 200%;
+    font-style: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.gray {
+    background-color: lightgray;
+}
+
+.green {
+    background-color: lime;
+}
+
+.blue {
+    background-color: cyan;
+}
+
+.orange {
+    background-color: orange;
 }

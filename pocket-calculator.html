@@ -6,26 +6,43 @@
   <script type="text/javascript" src="pocket-calculator.js"></script>
 </head>
 <body>
-  <!-- AC BUTTON -->
-  <button ></button>
-  <!-- +/- BUTTON -->
-  <button ></button>
-  <!-- 7 BUTTON -->
-  <button ></button>
-  <!-- 8 BUTTON -->
-  <button ></button>
-  <!-- 9 BUTTON -->
-  <button ></button>
-  <!-- 6 BUTTON -->
-  <button ></button>
-  <!-- 5 BUTTON -->
-  <button ></button>
-  <!-- AC BUTTON -->
-  <button ></button>
-  <!-- AC BUTTON -->
-  <button ></button>
-  <!-- AC BUTTON -->
-  <button ></button>
-  <!-- AC BUTTON -->
-  <button ></button>
+  <div class="calcDiv">
+    <table class="clacTable">
+      <h2>Owen Mason's Pocket Calculator</h2>
+      <tr>
+        <td colspan=4>
+          <p id="displayArea">0</p>
+        </td>
+      </tr>
+      <tr>
+        <td><button onclick="buttonAC();" class="defaultButton green">AC</button></td>
+        <td><button onclick="buttonNegative();" class="defaultButton green">+/-</button></td>
+        <td><button onclick="buttonPercent();" class="defaultButton green">%</button></td>
+        <td><button onclick="buttonPlus();" class="defaultButton blue">+</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="button7();" class="defaultButton gray">7</button></td>
+        <td><button onclick="button8();" class="defaultButton gray">8</button></td>
+        <td><button onclick="button9();" class="defaultButton gray">9</button></td>
+        <td><button onclick="buttonMinus();" class="defaultButton blue">-</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="button4();" class="defaultButton gray">4</button></td>
+        <td><button onclick="button5();" class="defaultButton gray">5</button></td>
+        <td><button onclick="button6();" class="defaultButton gray">6</button></td>
+        <td><button onclick="buttonMultiply();" class="defaultButton blue">*</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="button1();" class="defaultButton gray">1</button></td>
+        <td><button onclick="button2();" class="defaultButton gray">2</button></td>
+        <td><button onclick="button3();" class="defaultButton gray">3</button></td>
+        <td><button onclick="buttonDivide();" class="defaultButton blue">/</button></td>
+      </tr>
+      <tr>
+        <td colspan=2><button onclick="button0();" id="zeroButton" class="defaultButton gray" >0</button></td>
+        <td><button onclick="buttonDecimal();" class="defaultButton gray">.</button></td>
+        <td><button onclick="buttonEval();" class="defaultButton orange">=</button></td>
+      </tr>
+    </table>
+  </div>
 </body>
