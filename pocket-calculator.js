@@ -13,11 +13,10 @@ function display(output) {
             displayArray.push("0");
         } 
         
-        if (displayArray[0] == "-0" && output != ".") {
-            displayArray[0] = "-" + output;
-            console.log("running properly "  + displayArray[0]);
-        } else if (displayArray[displayArray.length-2] == "." && displayArray[displayArray.length-1] == "0") {
+        if (output != "0" && displayArray[displayArray.length-2] == "." && (displayArray[displayArray.length-1] == "0"|| displayArray[displayArray.length-1] == "-0")) {
             displayArray[displayArray.length-1] = output;
+        } else if (displayArray[0] == "-0" && output != "." && displayArray.length < 2) {
+            displayArray[0] = "-" + output;
         } else if (!(output == 0 && displayArray.length == 0)) {
             displayArray.push(output);
         } 
@@ -52,11 +51,10 @@ function display(output) {
         if (decimal == false) {
             sciNotation = (Number(displayArray.join(""))/10**(displayArray.length-1)).toFixed(2);
             exponent = displayArray.length - 1;
-        } else if (decimal == true && displayArray[0] == 0) {
+        } else if (decimal == true && displayArray[0] == "0") {
             sciNotation = visualArray.splice(0, visualArray.lastIndexOf("0")).toString();
             Number(sciNotation.splice(1, 0, ".")).toFixed(2);
             exponent = displayArray.indexOf(".")-(displayArray.lastIndexOf("0")+2);
-
         } else if (decimal == true && displayArray[0] != 0) {
             sciNotation = (Number(displayArray.join(""))/10**(displayArray.indexOf(".")-1)).toFixed(2);
             exponent = displayArray.indexOf(".");
