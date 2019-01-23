@@ -13,8 +13,9 @@ function display(output) {
             displayArray.push("0");
         } 
         
-        if (displayArray[0] == "-") {
-            displayArray[0] == displayArray[0] + output;
+        if (displayArray[0] == "-0" && output != ".") {
+            displayArray[0] = "-" + output;
+            console.log("running properly "  + displayArray[0]);
         } else if (displayArray[displayArray.length-2] == "." && displayArray[displayArray.length-1] == "0") {
             displayArray[displayArray.length-1] = output;
         } else if (!(output == 0 && displayArray.length == 0)) {
@@ -67,7 +68,7 @@ function display(output) {
     }
     visualArray.length = 0;
     if (!document.getElementById("displayArea").innerHTML) {
-        document.getElementById("displayArea").innerHTML = 0;
+        document.getElementById("displayArea").innerHTML = "0";
     }
 
 }
@@ -82,11 +83,10 @@ function buttonAC() {
     displayArray.length = 0;
     storedArray.length = 0;
     decimal = false;
-    document.getElementById("displayArea").innerHTML = 0;
+    document.getElementById("displayArea").innerHTML = "0";
 }
 
 function buttonDecimal() {
-    console.log(decimal);
     if (decimal == false) {
         decimal = true;
         display(".");
@@ -170,6 +170,9 @@ function buttonMultiply() {
 }
 
 function buttonNegative() {
+    if (displayArray[0] == null) {
+        displayArray.push("0");
+    }
     displayArray[0] = "-" + displayArray[0];
     display();
 }
